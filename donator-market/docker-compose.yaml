@@ -1,0 +1,53 @@
+version: '3'
+services:
+ 
+  anonymous:
+    image: anonymous
+    container_name: anonymous
+    build:
+      context: ./backend/anonymousUser
+      dockerfile: Dockerfile
+    environment:
+      anonymousUser-url: anonymous-docker
+
+  donator:
+    image: donator
+    container_name: donator
+    build:
+      context: ./backend/donator
+      dockerfile: Dockerfile
+    environment:
+      donator-url: donator-docker
+ 
+  donatee:
+    image: donatee
+    container_name: donatee
+    build:
+      context: ./backend/donatee
+      dockerfile: Dockerfile
+    environment:
+      donatee-url: donatee-docker
+
+  manager:
+    image: manager
+    container_name: manager
+    build:
+      context: ./backend/manager
+      dockerfile: Dockerfile
+    environment:
+      manager-url: manager-docker
+
+  react-app:
+    image: react-app
+    container_name: react-app
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      REACT_APP_ANONYMOUS: http://anonymous:8080
+      REACT_APP_DONATOR: http://donator:8080
+      REACT_APP_DONATEE: http://donatee:8080
+      REACT_APP_MANAGER: http://manager:8080
+

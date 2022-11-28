@@ -1,0 +1,12 @@
+version: '3'
+services:
+ 
+  logistic:
+    image: logistic
+    container_name: logistic
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"                                                                                         
+

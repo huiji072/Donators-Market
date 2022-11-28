@@ -1,0 +1,35 @@
+.content-mg{
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:2%;
+    margin-bottom:100px;
+}
+.repImgDiv{
+    margin-right:15px;
+    margin-left:5px;
+    height:auto;
+}
+.cartImg{
+    height:100px;
+    width:100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+.fs18{
+    font-size:18px
+}
+.fs24{
+    font-size:24px
+}
+.table{
+    width: 950px;
+}
+.cartContainer{
+    width: 950px;
+    margin: auto;
+}
+.cartListTr1{
+    text-align: center;
+}
