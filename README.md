@@ -7,8 +7,9 @@
 
 
 ### ☝️핵심 기능
-# Donator-Market Company
+MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.
 
+#### Donator-Market Company
 - 비회원
     - 회원가입, 로그인, 장바구니, 상품 상세 페이지
 - 기부자
