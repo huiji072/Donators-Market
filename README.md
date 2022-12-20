@@ -6,7 +6,7 @@
 아름다운 가게에 따르면 2017년 기준 기부 물품 중 67.6%가 재사용이 불가능해 폐기 처리되었다는 기사를 보았습니다. 올바른 기부 문화를 위해 기부 물품을 받는 기관도 원하는 물품을 직접 보고 선택할 수 있으면 좋겠다고 생각하였습니다. 기부자가 물품을 올리면 피 기부 기관이 원하는 물품을 원하는 양만큼 주문할 수 있게 제작하였습니다.
 
 
-## ☝️핵심 기능
+## ☝️개발 내용
 MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.D
 #### Donator-Market Company
 - Database 
@@ -30,11 +30,11 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 ## 🪛기술 스택
 
 - Backend
-    - Java, Spring(boot, security)
+    - Java, Spring(boot, security), JPA
 - Frontend
     - ReactJS
 - DB
-    - MySQL, MongoDB, Redis, JPA
+    - MySQL, MongoDB, Redis
 - etc
     - AWS(rds, S2), Docker, Kubernetes, RabbitMQ
     - Github, IntelliJ, VSCode, Window, Ubuntu, MSA
@@ -52,4 +52,16 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 
 ### Kubernetes
 
+
+##주요 기능
+1. 로그인
+![image](https://user-images.githubusercontent.com/76933597/208626275-409aa8c7-cbbf-4bb6-91b4-d7e3ed2e0929.png)
+
+2. 배송조회(rabbitmq, scheduler)
+
+3. 상품업로드 aws s3
+4. restapi 예시 하나
+5. 질문답변
+6. 도커설명
+7. 쿠버네티스 설명
     
