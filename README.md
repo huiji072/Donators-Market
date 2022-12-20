@@ -6,7 +6,7 @@
 아름다운 가게에 따르면 2017년 기준 기부 물품 중 67.6%가 재사용이 불가능해 폐기 처리되었다는 기사를 보았습니다. 올바른 기부 문화를 위해 기부 물품을 받는 기관도 원하는 물품을 직접 보고 선택할 수 있으면 좋겠다고 생각하였습니다. 기부자가 물품을 올리면 피 기부 기관이 원하는 물품을 원하는 양만큼 주문할 수 있게 제작하였습니다.
 
 
-### ☝️핵심 기능
+## ☝️핵심 기능
 MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.D
 #### Donator-Market Company
 - Database 
@@ -38,4 +38,12 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - etc
     - AWS(rds, S2), Docker, Kubernetes, RabbitMQ
     - Github, IntelliJ, VSCode, Window, Ubuntu, MSA
+
+##DB 구조
+![donator-market-database](https://user-images.githubusercontent.com/76933597/208621135-f5c9d7f7-00d1-46ec-b02c-7bff81d42360.PNG)
+![logistic-database](https://user-images.githubusercontent.com/76933597/208621155-b58437e1-bf4c-41eb-809f-ebccd24f075c.PNG)
+
+
+
+##
     
