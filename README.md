@@ -34,7 +34,8 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - Frontend
     - ReactJS
 - DB
-    - MySQL, MongoDB, Redis
+    - MySQL, MongoDB, Redis, JPA
 - etc
     - AWS(rds, S2), Docker, Kubernetes, RabbitMQ
     - Github, IntelliJ, VSCode, Window, Ubuntu, MSA
+    
