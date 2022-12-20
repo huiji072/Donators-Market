@@ -45,5 +45,11 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 
 
 
-##
+## 동작방식
+추후에 이미지 바꿀거임
+### Docker
+![image](https://user-images.githubusercontent.com/76933597/208622363-61b59415-1fd8-4593-bd18-76ce2a081be2.png)
+
+### Kubernetes
+
     
