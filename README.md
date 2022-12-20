@@ -7,9 +7,10 @@
 
 
 ### ☝️핵심 기능
-MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.
-
+MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.D
 #### Donator-Market Company
+- Database 
+    - MySQL, AWS RDS
 - 비회원
     - 회원가입, 로그인, 장바구니, 상품 상세 페이지
 - 기부자
@@ -20,7 +21,8 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
     - 회원목록 조회
 
 #### Logistic Company
-
+- Database 
+    - MongoDB
 - 송장번호 생성, 배송 상태 업데이트
 
 
