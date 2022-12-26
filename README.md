@@ -26,7 +26,6 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - 송장번호 생성, 배송 상태 업데이트
 
 
-
 ## 🪛기술 스택
 
 - Backend
@@ -36,8 +35,8 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - DB
     - MySQL, MongoDB, Redis
 - etc
-    - ### AWS(rds, S2), ### Docker, ### Kubernetes, RabbitMQ
-    - Github, IntelliJ, VSCode, Window, Ubuntu, ### MSA
+    - AWS(rds, S2), Docker, Kubernetes, RabbitMQ
+    - Github, IntelliJ, VSCode, Window, Ubuntu, MSA
 
 ## DB 구조
 ![donator-market-database](https://user-images.githubusercontent.com/76933597/208621135-f5c9d7f7-00d1-46ec-b02c-7bff81d42360.PNG)
