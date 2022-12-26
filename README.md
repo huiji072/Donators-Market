@@ -44,25 +44,80 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 ![logistic-database](https://user-images.githubusercontent.com/76933597/208621155-b58437e1-bf4c-41eb-809f-ebccd24f075c.PNG)
 
 
-
-## 동작방식
-추후에 이미지 바꿀거임
-### Docker
-![image](https://user-images.githubusercontent.com/76933597/208622363-61b59415-1fd8-4593-bd18-76ce2a081be2.png)
-
-### Kubernetes
-
-
 ## 주요 기능
-1. 로그인
+### 로그인
+[로그인] 버튼 클릭
 
-![image](https://user-images.githubusercontent.com/76933597/208626275-409aa8c7-cbbf-4bb6-91b4-d7e3ed2e0929.png)
+email, password 입력 후 [Sign in] 버튼 클릭
 
-2. 배송조회(rabbitmq, scheduler)
+리액트에서 email, password를 받은 후 json으로 변환
 
-3. 상품업로드 aws s3
-4. restapi 예시 하나
-5. 질문답변
-6. 도커설명
-7. 쿠버네티스 설명
-    
+json으로 변환한 데이터를 '비회원' 서버로 post 형식으로 request
+
+'비회원'서버에서 받은 후 JWT 토큰 생성 후 return
+
+리액트에서 콜백함수로 token 받음
+
+리액트 LocalStorage에 token 등록
+
+### 상품등록
+[상품등록] 버튼 클릭
+
+상품상태, 상품명, 재고, 상품 상세 내용 작성
+
+[파일 선택] 클릭 후 이미지 파일 선택
+
+[Submit] 버튼 클릭
+
+AWS S3에 이미지 등록
+
+상품상태, 상품명, 재고, 상품상세 내용을 json 직렬화
+
+6번 값을 Blob 형식으로 formData에 담음
+
+이미지를 formData에 담음
+
+formData를 post 형식으로 '기부자' 서버에 request
+
+'기부자' 서버에서 받은 값을 데이터베이스에 저장
+
+데이터베이스 저장에 실패하면 alert("상품 등록 중 에러가 발생하였습니다.")
+
+403 혹은 400번 에러가 나면 alert("상품 등록 권한이 없습니다.) 후 login창으로 이동
+
+### 주문&운송번호 생성
+상품 선택 후 [주문하기] 버튼 클릭
+
+'피 기부 기관' 서버에서 OrderDto를 받아 데이터베이스에 저장(주문)
+
+'기부자' 서버에서 OffderDto를 받아 데이터베이스에 저장(판매)
+
+'피 기부 기관' 서버에서 RabbitTemplate을 이용하여 orderId를 '택배사' 서버에 request
+
+'택배사' 서버에서 RabbitListener로 orderId를 받음
+
+'택배사' 서버에서 스케줄러를 이용해 매일 a시 마다 받은 orderId를 이용하여 송장번호 생성
+
+'택배사' 서버에서 송장번호, 배송시간, 배송상태, orderId를 담은 logistics를 json으로 변환
+
+json으로 변환한 데이터를 rabbitTemplate을 이용하여 '피 기부 기관'에 전송
+
+b시간 c시간 d시간을 스케줄러를 사용하여 배송상태를 인수중, 배송준비중, 배송중, 배송완료를 추가
+
+### 배송조회
+운송번호 입력 후 [배송조회] 버튼 클릭
+
+리액트에서 입력한 값을 받아 post 형식으로 '피 기부 기관' 서버에 전송
+
+'피 기부 기관' 서버에서 값을 받은 후 rabbitTemplate을 통해 '택배사' 서버에 운송번호 전송
+
+'택배사' 서버에서 값을 받은 후 해당 운송번호에 해당하는 데이터를 json으로 변환 후 return
+
+'피 기부 기관' 서버에서 RestTemplate을 이용하여 get방식으로 데이터를 받아옴
+
+받아온 데이터를 return
+
+리액트에서 콜백함수를 통해 return  된 값을 받아와서 웹브라우저에 출력
+
+
+
