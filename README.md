@@ -46,21 +46,16 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 
 ## 주요 기능
 ### 로그인
-[로그인] 버튼 클릭
-
-email, password 입력 후 [Sign in] 버튼 클릭
-
-리액트에서 email, password를 받은 후 json으로 변환
-
-json으로 변환한 데이터를 '비회원' 서버로 post 형식으로 request
-
-'비회원'서버에서 받은 후 JWT 토큰 생성 후 return
-
-리액트에서 콜백함수로 token 받음
-
-리액트 LocalStorage에 token 등록
+1. [로그인] 버튼 클릭
+2. email, password 입력 후 [Sign in] 버튼 클릭
+3. 리액트에서 email, password를 받은 후 json으로 변환
+4. json으로 변환한 데이터를 '비회원' 서버로 post 형식으로 request
+5. '비회원'서버에서 받은 후 JWT 토큰 생성 후 return
+6. 리액트에서 콜백함수로 token 받음
+7. 리액트 LocalStorage에 token 등록
 
 ### 상품등록
+﻿
 [상품등록] 버튼 클릭
 
 상품상태, 상품명, 재고, 상품 상세 내용 작성
@@ -84,6 +79,8 @@ formData를 post 형식으로 '기부자' 서버에 request
 데이터베이스 저장에 실패하면 alert("상품 등록 중 에러가 발생하였습니다.")
 
 403 혹은 400번 에러가 나면 alert("상품 등록 권한이 없습니다.) 후 login창으로 이동
+
+﻿
 
 ### 주문&운송번호 생성
 상품 선택 후 [주문하기] 버튼 클릭
