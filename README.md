@@ -4,9 +4,7 @@
 
 ## ☝️개발 내용
 MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.
-#### Donator-Market Company
-- Database 
-    - MySQL, AWS RDS
+#### Donator-Market Company Role
 - 비회원
     - 회원가입, 로그인, 장바구니, 상품 상세 페이지
 - 기부자
@@ -16,10 +14,14 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - 관리자
     - 회원목록 조회
 
+### Donator-Market Database
+- MySQL, RDS
+
 #### Logistic Company
-- Database 
-    - MongoDB
 - 송장번호 생성, 배송 상태 업데이트
+
+### Logistic Company
+- MongoDB
 
 
 ## 🪛기술 스택
@@ -31,8 +33,8 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - DB
     - MySQL, MongoDB, Redis
 - etc
-    - AWS(rds, S2), Docker, Kubernetes, RabbitMQ
-    - Github, IntelliJ, VSCode, Window, Ubuntu, MSA
+    - AWS(rds, S3), Docker, Kubernetes, RabbitMQ, MSA
+    - Github, IntelliJ, VSCode, Window, Ubuntu
 
 ## DB 구조
 ![donator-market-database](https://user-images.githubusercontent.com/76933597/208621135-f5c9d7f7-00d1-46ec-b02c-7bff81d42360.PNG)
