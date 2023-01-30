@@ -1,6 +1,6 @@
 # 기부마켓
 
-
+https://efficient-squirrel-1f7.notion.site/e500edd698d3446da74befa92e4dbee8
 
 ## ☝️개발 내용
 MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.
