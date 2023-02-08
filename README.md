@@ -4,9 +4,10 @@ https://efficient-squirrel-1f7.notion.site/e500edd698d3446da74befa92e4dbee8
 
 ## ☝️개발 내용
 MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Donator-Market에서는 권한 별로 서버를 나누었습니다.
-#### Donator-Market Company Role
+
+#### Company - Donator-Market 
 - 비회원
-    - 회원가입, 로그인, 장바구니, 상품 상세 페이지
+    - 메인 페이지, 회원가입, 로그인, 장바구니, 상품 상세 페이지
 - 기부자
     - 상품등록, 상품수정, 상품관리, 판매이력, 답변하기
 - 피 기부 기관
@@ -14,13 +15,13 @@ MSA 설계를 위해 회사 별로 서버와 데이터베이스를 나누고, Do
 - 관리자
     - 회원목록 조회
 
-### Donator-Market Database
+### Database - Donator-Market 
 - MySQL, RDS
 
-#### Logistic Company
+#### Company - Logistic
 - 송장번호 생성, 배송 상태 업데이트
 
-### Logistic Company
+### Database - Logistic
 - MongoDB
 
 
