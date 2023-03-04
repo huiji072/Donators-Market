@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff6d812bb097dac6d847b1e4712585674c4fb4c5bc24781ac5ff79837a68aa68
-size 105
+version: '3.1'
+services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+

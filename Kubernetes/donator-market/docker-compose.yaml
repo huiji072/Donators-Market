@@ -1,0 +1,85 @@
+version: '3'
+services:
+ 
+  anonymous:
+    image: anonymous
+    container_name: anonymous
+    build:
+      context: ./backend/anonymousUser
+      dockerfile: Dockerfile
+    environment:
+      redis-ip: 172.30.1.18
+      redis-port: 6379
+      react-ip: 172.30.1.18
+      react-port: 3000
+
+  donator:
+    image: donator
+    container_name: donator
+    build:
+      context: ./backend/donator
+      dockerfile: Dockerfile
+    environment:
+      rabbit-ip: 172.30.1.18
+      rabbit-port: 5672
+      rabbit-user: guest
+      rabbit-pw: guest
+      redis-ip: 172.30.1.18
+      redis-port: 6379
+      react-ip: 172.30.1.18
+      react-port: 3000
+ 
+  donatee:
+    image: donatee
+    container_name: donatee
+    build:
+      context: ./backend/donatee
+      dockerfile: Dockerfile
+    environment:
+      rabbit-ip: 172.30.1.18
+      rabbit-port: 5672
+      rabbit-user: guest
+      rabbit-pw: guest
+      redis-ip: 172.30.1.18
+      redis-port: 6379
+      react-ip: 172.30.1.18
+      react-port: 3000
+      mongo-ip: 172.30.1.18
+      mongo-port: 27017
+      mongo-auth: admin
+      mongo-db: test
+      mongo-user: root
+      mongo-pw: 1234
+      logistic_search_ip: 172.30.1.18
+      logistic_search_port: 8081
+
+  manager:
+    image: manager
+    container_name: manager
+    build:
+      context: ./backend/manager
+      dockerfile: Dockerfile
+    environment:
+      rabbit-ip: 172.30.1.18
+      rabbit-port: 5672
+      rabbit-user: guest
+      rabbit-pw: guest
+      redis-ip: 172.30.1.18
+      react-port: 3000
+      redis-port: 6379
+      react-ip: 172.30.1.18
+
+  react-app:
+    image: react-app
+    container_name: react-app
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      REACT_APP_ANONYMOUS: http://anonymous:8080
+      REACT_APP_DONATOR: http://donator:8080
+      REACT_APP_DONATEE: http://donatee:8080
+      REACT_APP_MANAGER: http://manager:8080
+

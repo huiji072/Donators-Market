@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f44f08176a5586df3559a1702751f1ff3040e8205d241bee76c9ceec86109fc
-size 370
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: anonymous-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: anonymous.com
+    http:
+      paths:
+      - path: /anonymous
+        pathType: Prefix
+        backend:
+          service:
+            name: anonymous
+            port:
+              number: 8080
+

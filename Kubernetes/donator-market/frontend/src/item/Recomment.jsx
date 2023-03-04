@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:756fd492f766da90d514a74c498416f78736247d2e61160e371094506742655a
-size 168
+import React from "react";
+
+function Recomment() {
+    return(
+
+        <div>
+            <h1>test!!</h1>
+        </div>
+
+    )
+}
+
+export default Recomment;

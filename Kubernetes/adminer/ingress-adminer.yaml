@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f733f57b88348be8dd83403a378a759dd17df60f3a0304638d57acc41dc8db7c
-size 338
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: adminer-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /adminer
+        pathType: Prefix
+        backend:
+          service:
+            name: adminer
+            port:
+              number: 8080

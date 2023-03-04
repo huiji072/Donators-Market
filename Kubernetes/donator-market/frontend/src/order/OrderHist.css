@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:905dddb106f9cddc7d98b71614929ac854ff14752ee51a61ed7cc1e694f53bc5
-size 589
+.content-mg{
+    margin-left:30%;
+    margin-right:30%;
+    margin-top:2%;
+    margin-bottom:100px;
+}
+.repImgDiv{
+    margin: 10px;
+    width: 100px;
+    height:auto;
+}
+.imgOrderHist{
+    height:100px;
+    width:100px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.fs18{
+    font-size:18px
+}
+.fs24{
+    font-size:24px
+}
+.containerOrderHist{
+    margin: auto;
+    width: 950px;
+}
+.cardOrderHist{
+    width : 900px;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.contentsOrderHist{
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.orderHistListForm{
+    margin-bottom: 30px;
+}

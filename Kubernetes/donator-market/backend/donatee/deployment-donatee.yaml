@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:851d3c3ea148938bd768879878958522f64bfb54dc020ba1a386836295193043
-size 1371
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: donatee
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: donatee
+  template:
+    metadata:
+      labels:
+        app: donatee
+    spec:
+      containers:
+        - name: donatee
+          image: huiji0720/donatee
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: redis-ip
+              value: '172.30.1.18'
+            - name: redis-port
+              value: '6379'
+            - name: react-ip
+              value: '192.168.49.2'
+            - name: react-port
+              value: '31414'
+            - name: rabbit-ip
+              value: '172.30.1.18'
+            - name: rabbit-port
+              value: '5672'
+            - name: rabbit-user
+              value: 'guest'
+            - name: rabbit-pw
+              value: 'guest'
+            - name: mongo-ip
+              value: '172.30.1.18'
+            - name: mongo-port
+              value: '27017'
+            - name: mongo-auth
+              value: 'admin'
+            - name: mongo-db
+              value: 'test'
+            - name: mongo-user
+              value: 'root'
+            - name: mongo-pw
+              value: '1234'
+            - name: logistic_search_ip
+              value: '192.168.49.2'
+            - name: logistic_search_port
+              value: '31005'

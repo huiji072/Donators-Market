@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65ac97ce17fe489ce12cfc8bce49d8a68ecbb60c872ee34d41a27b5addfaf9c4
-size 194
+.JoinForm{
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.error {
+    color: #bd2130;
+}
+.joinContainer{
+    width: 950px;
+    margin: auto;
+}

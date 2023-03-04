@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9986b90fc9459259f9a563bb4098882727b065fffdd9541b3a6be50b4b23df1d
-size 362
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: donator-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: donator.com
+    http:
+      paths:
+      - path: /donator
+        pathType: Prefix
+        backend:
+          service:
+            name: donator
+            port:
+              number: 8080
+

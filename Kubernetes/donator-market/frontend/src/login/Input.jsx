@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6456e38aa8f621dc5366f10cbeb42513087a09632ac6722ce8f1e6865e5de7b0
-size 828
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+class Input extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            value: props.value? props.value : '',
+            className: props.className? props.className : '',
+            error: false
+        }
+    }
+
+    //...
+
+    render () {
+        const {handleError, ...opts} = this.props
+        this.handleError = handleError
+        return (
+          <input {...opts} value={this.state.value}
+            onChange={this.inputChange} className={this.state.className} /> 
+        )
+    }
+}
+
+Input.propTypes = {
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  className: PropTypes.string,
+  value: PropTypes.string,
+  handleError: PropTypes.func
+}
+
+export default Input

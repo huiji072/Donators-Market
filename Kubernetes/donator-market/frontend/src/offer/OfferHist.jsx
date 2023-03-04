@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:298fc1b005d19e3a6fe5a563cc6dd51041e948aa9a00244372869fe12ec532c4
-size 415
+import React, { Component } from 'react';
+import './OfferHist.css';
+import OfferHistList from './OfferHistList';
+
+function OfferHist(props) {
+        return(
+            <div class="containerOfferHist">
+                
+                
+            <h2 class="mb-4">판매 이력</h2>
+            <div>
+
+                <OfferHistList/>
+
+            </div>
+            </div>
+        );
+}
+
+export default OfferHist;

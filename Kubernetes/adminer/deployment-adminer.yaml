@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aec411a838b002225bfc6259c72af7dd06d187ee8d5813c207a3f6092b7d7508
-size 377
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminer
+  labels:
+    app: adminer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adminer
+  template:
+    metadata:
+      name: adminer
+      labels:
+        app: adminer
+    spec:
+      containers:
+        - name: adminer
+          image: huiji0720/adminer
+          ports:
+            - containerPort: 8080

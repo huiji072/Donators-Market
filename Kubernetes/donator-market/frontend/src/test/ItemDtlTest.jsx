@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4690412cc1e45806d65d4bbe0d5d43fc2666c130321fd198d0b9e90708f8e2cd
-size 603
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+
+function ItemDtlTest() {
+  // 요청받은 정보를 담아줄 변수 선언
+  const [ testStr, setTestStr ] = useState('');
+
+  // 변수 초기화
+  function callback(str) {
+    setTestStr(str);
+  }
+
+  // 첫 번째 렌더링을 마친 후 실행
+  useEffect(
+      () => {
+        axios({
+            url: '/hello',
+            method: 'GET'
+        }).then((res) => {
+            callback(res.data);
+        })
+      }, []
+  );
+
+  return (
+      <>
+      <h1> {testStr} </h1>
+      </>
+  );
+}
+
+export default ItemDtlTest;

@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56fe7abceaf938057f054f51fbf92d753e24617e9cb4c8efef91e4098d2ba7c8
-size 315
+nav{
+    width: 980px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.titleHeader{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.title{
+    color: black;
+}
+.loginInfo{
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 300px;
+}
+.loginInfo2{
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 700px;
+}
+.searchForm{
+    display: flex!important;
+}

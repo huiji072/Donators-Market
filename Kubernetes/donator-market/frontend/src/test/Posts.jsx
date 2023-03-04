@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:569714c98e95364d2cecc53b1a01d2113f965892e7b3b3914b7c6fb3aef0ca44
-size 451
+// import React from "react";
+
+// const Posts = ({posts, loading}) => {
+
+//     if(loading) {
+//         return <h2>Loading...</h2>
+//     }
+
+//     return (
+
+//         <ul  className="list-group mb-4">
+//             {posts.map(post => (
+//                 <li key={post.id} className='list-group-item'>
+//                     {post.answerContent}
+//                 </li>
+//             ))}
+//         </ul>
+
+//     )
+// }
+
+// export default Posts;

@@ -8,6 +8,8 @@
 *.DS_Store
 .DS_Store
 
+Docker
+
 donator-market/frontend/build
 donator-market/frontend/node_modules
 donator-market/frontend/public

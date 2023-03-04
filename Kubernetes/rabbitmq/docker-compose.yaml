@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26c38014335ce84cabcc1b97ab7dde9007b00439374d807bcd50064b94c11941
-size 312
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-stream    
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "RabbitMQ-My-Cookies"
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+

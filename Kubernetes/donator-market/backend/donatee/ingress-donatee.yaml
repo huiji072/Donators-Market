@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96b464993f8716862dbf715ff87598e609130818b9937e4a49b3639664523539
-size 363
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: donatee-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_set_headers "Access-Control-Allow-Origin: $http_origin";
+    nginx.ingress.kubernetes.io/cors-allow-headers: "DNT, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Range, Authorization, X-Project-Key"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+    # nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-expose-headers: "*, X-Project-Key"
+    nginx.ingress.kubernetes.io/cors-max-age: "1728000"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+spec:
+  rules:
+  - host: donatee.com
+    http:
+      paths:
+      - path: /donatee
+        pathType: Prefix
+        backend:
+          service:
+            name: donatee
+            port:
+              number: 8080
+
+

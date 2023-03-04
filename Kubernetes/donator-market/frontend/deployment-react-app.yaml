@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ae66116d9312291ec9c0a905184ac0cf706d2ada3ed2845083c188475e9c00c
-size 709
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-app
+          image: huiji0720/react-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_ANONYMOUS
+              value: http://anonymous:8080
+            - name: REACT_APP_DONATOR
+              value: http://donator:8080
+            - name: REACT_APP_DONATEE
+              value: http://donatee:8080
+            - name: REACT_APP_MANAGER
+              value: http://manager:8080

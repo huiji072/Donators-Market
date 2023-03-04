@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb8033f4e16ece5f4a04768845ddefd4496c9ed5cb8d749b00134ae7bb5fefa0
-size 998
+import React, { Component, useState, useEffect } from 'react';
+import './Main.css';
+import axios from 'axios'
+import MainList from './MainList';
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import {Container ,Card,Row, Col, Button} from 'react-bootstrap';  
+
+function Main(props) {
+
+    // const clickToNaver = () => {
+    //     axios({
+    //         url: '/naver',
+    //         method: 'GET',
+    //         headers: { 
+    //             'Authorization' : 'Bearer ' + localStorage.getItem("ACCESS_TOKEN"),
+    //             'Content-Type': 'application/json' 
+    //           },
+    //     }).then((res) => {
+    //         alert("success")
+    //     })
+    
+    // }
+
+    return (
+        <div>
+            <Container className="mainContainer">
+            {/* <Button onClick={clickToNaver}>
+                네이버로 이동</Button>  */}
+                <Row className='mainRow'>
+                    <MainList/>
+                </Row>
+            </Container>
+        </div>
+            
+        );
+}
+
+
+export default Main;

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dce4fd0045bffa7b1c01c038fd5859ffa52d100c418bd4a769cd5b376b499784
-size 521
+version: '3'
+services:
+ 
+  logistic:
+    image: logistic
+    container_name: logistic
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"                                                                                         
+    environment:
+      mongo-ip: 172.30.1.18
+      mongo-port: 27017
+      mongo-auth: admin
+      mongo-user: root
+      mongo-pw: 1234
+      mongo-db: test
+      rabbit-ip: 172.30.1.18
+      rabbit-port: 5672
+      rabbit-user: guest
+      rabbit-pw: guest

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dafd93fcd63426f7f04fc59634c85341f7e8bb92dfcc37e631bbaf9c7c0ff07f
-size 196
+.loginForm{
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.error {
+    color: #bd2130;
+}
+.loginContainer{
+    width: 950px;
+    margin: auto;
+}

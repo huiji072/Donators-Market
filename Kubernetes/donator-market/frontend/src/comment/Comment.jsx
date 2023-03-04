@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:427598372987d2c2ba6982f7f15196726b2992aba13fe9ce91c380bdfa1ec53d
-size 638
+import React from "react";
+import './Comment.css';
+
+function Comment() {
+
+
+
+    return (
+        <>
+<div className="commentWrapper2">
+                <div>
+                    <img className="commentImage"
+                    src="/img/comment.png" />
+                </div>
+
+                <div className="commentCotentContainer">
+                    <span className="commentNameText"></span>
+                    <span className="commentRegTime"></span>
+                    <span className="commentCommentText"></span>                    
+                </div>
+            </div>
+        
+        </>
+
+    );
+}
+
+export default Comment;

@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:840811c862889858f36dd7d0540189b292d02af1e3e8e92bc382803b86eb2ac2
-size 988
+// import React, { Component } from 'react';
+// import './Cart.css';
+// import CartList from './CartList';
+// function Cart(props) {
+
+//     const orders = () => {
+
+//     }
+
+//         return(
+//             <div class="cartContainer">
+//                 <div>
+//                     <h2 class="mb-4">장바구니 목록</h2>
+//                 <div>
+
+//                 <table class="table">
+//                     <thead>
+//                     <tr class="cartListTr1">
+//                         <td>
+//                             <input type="checkbox" id="checkall" onclick="checkAll()"/> 
+//                         </td>
+//                         <td>상품정보</td>
+//                     </tr>
+//                     </thead>
+//                     <tbody>
+//                         <CartList/>
+//                     </tbody>
+//                 </table>
+
+
+
+
+//                 </div>
+//             </div>
+
+//             </div>
+//         );
+// }
+
+// export default Cart;

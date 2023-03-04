@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:92431e2614ccc3b674fd6d7dfe99650b38aa585ca13bee882de63cf9f16a7a49
-size 692
+import React from "react";
+
+const Pagination = ( {postsPerPage, totalPosts, paginate}) => {
+    const pageNumbers = [];
+
+    for(let i = 1 ; i <= Math.ceil(totalPosts/postsPerPage); i++) {
+        pageNumbers.push(i)
+    }
+
+    return (
+        <nav>
+            <ul className="pagination">
+                {pageNumbers.map(number => (
+                    <li key={number} className="page-item">
+                        <a href="?#" className="page-link"
+                        onClick={()=>paginate(number)}>
+                            {number}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+
+        </nav>
+    )
+}
+
+export default Pagination;

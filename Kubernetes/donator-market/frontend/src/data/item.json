@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:770b1ad683f95247b0815cf8679eea92e34af8e601a7c1e05512502b61050e51
-size 640
+{
+    "item":
+    [
+        {
+            "itemId": 1,
+            "itemNm": "test1",
+            "itemDetail": "props를 이용하여 출력된 값입니다.",
+            "stockNumber": 10,
+            "itemSellStatus": "SELL",
+            "createdBy":"seller1@gmail.com",
+            "regTime": "2022-08-25"
+        },
+        {
+            "itemId": 2,
+            "itemNm": "test2",
+            "itemDetail": "props를 이용하여 출력된 값입니다2!!",
+            "stockNumber": 200,
+            "itemSellStatus": "SOLD_OUT",
+            "createdBy": "seller1@gmail.com",
+            "regTime": "2022-08-230"
+        }
+
+    ]
+}

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e0c397fa88eebce03e2100808ee380e14e2870ba91f3911c8b57991fa4e0571
-size 363
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: manager-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: manager.com
+    http:
+      paths:
+      - path: /manager
+        pathType: Prefix
+        backend:
+          service:
+            name: manager
+            port:
+              number: 8080
+
+

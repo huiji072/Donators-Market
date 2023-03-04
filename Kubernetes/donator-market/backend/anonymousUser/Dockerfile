@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e35f8b787940ae2586e0dd3aed8f815fdba1f8eb721bb8b0cedfea153b399d5
-size 142
+FROM openjdk:11
+
+EXPOSE 8080
+
+ADD shop-0.0.1-SNAPSHOT.jar /opt
+
+WORKDIR /opt
+
+ENTRYPOINT ["java", "-jar", "shop-0.0.1-SNAPSHOT.jar"]

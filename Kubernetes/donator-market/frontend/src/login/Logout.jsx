@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:16a66c520cf8a3ae4629759d54b450249518d4f6d1cbf3de06d23ed1a3f48be8
-size 554
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+
+function Logout() {
+
+  localStorage.setItem("ACCESS_TOKEN", null);
+  window.location.href = "/";
+
+    // axios({
+    //     url: '/members/logout',
+    //     method: 'get'
+    //   }).then((res) => {
+    //     callback(res.data);
+    //     alert("aaa")
+    //     localStorage.setItem("ACCESS_TOKEN", null);
+    //     window.location.href = "/";
+    //   }).catch((error) => {
+    //     console.log(error);
+    //     alert(error)
+    //   })
+
+
+}
+
+export default Logout;
