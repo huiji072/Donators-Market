@@ -19,6 +19,9 @@ donator-market/backend/backend_anonymousUser/gradle
 donator-market/backend/backend_anonymousUser/build
 donator-market/backend/backend_anonymousUser/build.gradle
 donator-market/backend/backend_anonymousUser/*.txt
+donator-market/backend/backend_anonymousUser/settings.gradle
+donator-market/backend/backend_anonymousUser/gradlew
+donator-market/backend/backend_anonymousUser/src/main/java/com/shop/config
 
 donator-market/backend/backend_donator/LOG_PATH_IS_UNDEFINED
 donator-market/backend/backend_donator/item
@@ -26,6 +29,9 @@ donator-market/backend/backend_donator/gradle
 donator-market/backend/backend_donator/build
 donator-market/backend/backend_donator/build.gradle
 donator-market/backend/backend_donator/*.txt
+donator-market/backend/backend_donator/settings.gradle
+donator-market/backend/backend_donator/gradlew
+donator-market/backend/backend_donator/src/main/java/com/shop/config
 
 donator-market/backend/backend_donatee/LOG_PATH_IS_UNDEFINED
 donator-market/backend/backend_donatee/item
@@ -33,6 +39,9 @@ donator-market/backend/backend_donatee/gradle
 donator-market/backend/backend_donatee/build
 donator-market/backend/backend_donatee/build.gradle
 donator-market/backend/backend_donatee/*.txt
+donator-market/backend/backend_donatee/settings.gradle
+donator-market/backend/backend_donatee/gradlew
+donator-market/backend/backend_donatee/src/main/java/com/shop/config
 
 
 donator-market/backend/backend_manager/LOG_PATH_IS_UNDEFINED
@@ -41,6 +50,9 @@ donator-market/backend/backend_manager/gradle
 donator-market/backend/backend_manager/build
 donator-market/backend/backend_manager/build.gradle
 donator-market/backend/backend_manager/*.txt
+donator-market/backend/backend_manager/settings.gradle
+donator-market/backend/backend_manager/gradlew
+donator-market/backend/backend_manager/src/main/java/com/shop/config
 
 donator-market/backend/backend_courier/LOG_PATH_IS_UNDEFINED
 donator-market/backend/backend_courier/item
@@ -48,5 +60,10 @@ donator-market/backend/backend_courier/gradle
 donator-market/backend/backend_courier/build
 donator-market/backend/backend_courier/build.gradle
 donator-market/backend/backend_courier/*.txt
+donator-market/backend/backend_courier/settings.gradle
+donator-market/backend/backend_courier/gradlew
+donator-market/backend/backend_courier/src/main/java/com/shop/config
 
 donator-market/backend/item
+donator-market/backend/.gradle
+donator-market/backend/.idea
