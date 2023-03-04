@@ -6,6 +6,7 @@
 *.jar
 *.bat
 *.DS_Store
+.DS_Store
 
 frontend/build
 frontend/node_modules
