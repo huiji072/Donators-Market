@@ -13,7 +13,7 @@ frontend/node_modules
 frontend/public
 frontend/src/test
 
-donator-market/*
+./donator-market/*
 
 donator-market/backend/backend_anonymousUser/LOG_PATH_IS_UNDEFINED
 donator-market/backend/backend_anonymousUser/item
