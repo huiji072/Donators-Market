@@ -11,33 +11,40 @@ frontend/node_modules
 frontend/public
 frontend/src/test
 
-donator-market-docker/backend/backend_anonymousUser/LOG_PATH_IS_UNDEFINED
-donator-market-docker/backend/backend_anonymousUser/item
-donator-market-docker/backend/backend_anonymousUser/gradle
-donator-market-docker/backend/backend_anonymousUser/build
-donator-market-docker/backend/backend_anonymousUser/build.gradle
-donator-market-docker/backend/backend_anonymousUser/*.txt
+donator-market/backend/backend_anonymousUser/LOG_PATH_IS_UNDEFINED
+donator-market/backend/backend_anonymousUser/item
+donator-market/backend/backend_anonymousUser/gradle
+donator-market/backend/backend_anonymousUser/build
+donator-market/backend/backend_anonymousUser/build.gradle
+donator-market/backend/backend_anonymousUser/*.txt
 
-donator-market-docker/backend/backend_donator/LOG_PATH_IS_UNDEFINED
-donator-market-docker/backend/backend_donator/item
-donator-market-docker/backend/backend_donator/gradle
-donator-market-docker/backend/backend_donator/build
-donator-market-docker/backend/backend_donator/build.gradle
-donator-market-docker/backend/backend_donator/*.txt
+donator-market/backend/backend_donator/LOG_PATH_IS_UNDEFINED
+donator-market/backend/backend_donator/item
+donator-market/backend/backend_donator/gradle
+donator-market/backend/backend_donator/build
+donator-market/backend/backend_donator/build.gradle
+donator-market/backend/backend_donator/*.txt
 
-donator-market-docker/backend/backend_donatee/LOG_PATH_IS_UNDEFINED
-donator-market-docker/backend/backend_donatee/item
-donator-market-docker/backend/backend_donatee/gradle
-donator-market-docker/backend/backend_donatee/build
-donator-market-docker/backend/backend_donatee/build.gradle
-donator-market-docker/backend/backend_donatee/*.txt
+donator-market/backend/backend_donatee/LOG_PATH_IS_UNDEFINED
+donator-market/backend/backend_donatee/item
+donator-market/backend/backend_donatee/gradle
+donator-market/backend/backend_donatee/build
+donator-market/backend/backend_donatee/build.gradle
+donator-market/backend/backend_donatee/*.txt
 
 
-donator-market-docker/backend/backend_manager/LOG_PATH_IS_UNDEFINED
-donator-market-docker/backend/backend_manager/item
-donator-market-docker/backend/backend_manager/gradle
-donator-market-docker/backend/backend_manager/build
-donator-market-docker/backend/backend_manager/build.gradle
-donator-market-docker/backend/backend_manager/*.txt
+donator-market/backend/backend_manager/LOG_PATH_IS_UNDEFINED
+donator-market/backend/backend_manager/item
+donator-market/backend/backend_manager/gradle
+donator-market/backend/backend_manager/build
+donator-market/backend/backend_manager/build.gradle
+donator-market/backend/backend_manager/*.txt
 
-donator-market-docker/backend/item
+donator-market/backend/backend_courier/LOG_PATH_IS_UNDEFINED
+donator-market/backend/backend_courier/item
+donator-market/backend/backend_courier/gradle
+donator-market/backend/backend_courier/build
+donator-market/backend/backend_courier/build.gradle
+donator-market/backend/backend_courier/*.txt
+
+donator-market/backend/item

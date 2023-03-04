@@ -1,0 +1,56 @@
+.footerTextList {
+    width: 80%;
+    position: relative;
+    float: left;
+}
+.footerTextList li {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+.footerTitleList li {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+.footerTitleList {
+    width: 20%;
+    position: relative;
+    float: left;
+    font-weight: 700;
+}
+.footerWrap {
+    width: 100%;
+    height: 350px;
+    background: #363636;
+    position: relative;
+    padding-bottom: 80px;
+    float: left;
+    text-decoration: none;
+    flex: 1;
+    margin-top: 50px;
+}
+.footer {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+.brM {
+    display: none;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'NanumSquareRound';
+    line-height: 1.6;
+    list-style: none;
+    font-size: 20px;
+    color: #383838;
+}
+.text-white{
+    text-align: center;
+}
