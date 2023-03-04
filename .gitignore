@@ -40,6 +40,4 @@ donator-market-docker/backend/backend_manager/build
 donator-market-docker/backend/backend_manager/build.gradle
 donator-market-docker/backend/backend_manager/*.txt
 
-donator-market-docker/backend/backend_courier
-
 donator-market-docker/backend/item
