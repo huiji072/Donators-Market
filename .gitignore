@@ -12,6 +12,7 @@ donator-market/frontend/build
 donator-market/frontend/node_modules
 donator-market/frontend/public
 donator-market/frontend/src/test
+donator-market/frontend/*.json
 
 donator-market/backend/backend_anonymousUser/LOG_PATH_IS_UNDEFINED
 donator-market/backend/backend_anonymousUser/item
